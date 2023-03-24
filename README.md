@@ -15,9 +15,9 @@
 - Each data type can do different things and behave differently.
 - Go is a statically typed language => You need to tell Go Compiler, the data type when declaring the variable
 - Type Inference: BUT, Go can infer the type when u assign a value.
-:thumbsup: **More Robus, reduces the likelihood of errors.**
-:thumbsup: **Helps developers to catch type mismatches sooner (at compiler time)**
-:thumbsup: **Discover mistakes at compile time, NOT at runtime**
+⌘Return:thumbsup: **More Robus, reduces the likelihood of errors.**
+⌘Return:thumbsup: **Helps developers to catch type mismatches sooner (at compiler time)**
+⌘Return:thumbsup: **Discover mistakes at compile time, NOT at runtime**
 
 ### "Syntatic Sugar" in Programming
     `conferenceName := "Go Conference" Syntatic Sugar`
