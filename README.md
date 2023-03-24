@@ -15,6 +15,7 @@
 - Each data type can do different things and behave differently.
 - Go is a statically typed language => You need to tell Go Compiler, the data type when declaring the variable
 - Type Inference: BUT, Go can infer the type when u assign a value.
+
 => **More Robus, reduces the likelihood of errors.**
 => **Helps developers to catch type mismatches sooner (at compiler time)**
 => **Discover mistakes at compile time, NOT at runtime**
