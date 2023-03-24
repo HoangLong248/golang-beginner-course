@@ -19,6 +19,7 @@
 => **Helps developers to catch type mismatches sooner (at compiler time)**
 => **Discover mistakes at compile time, NOT at runtime**
 ### "Syntatic Sugar" in Programming
-- A term to descrbe a feature in a language that let's you do smth more easily
+    `conferenceName := "Go Conference" // Syntatic Sugar`
+- A term to describe a feature in a language that let's you do smth more easily
 - Makes the language "sweeter" for human use
 - But doesn't add any new functionality that it didn't already have
