@@ -23,3 +23,16 @@
 - A term to describe a feature in a language that let's you do smth more easily
 - Makes the language "sweeter" for human use
 - But doesn't add any new functionality that it didn't already have
+
+## Geting The User Input
+### "fmt" package
+- Different functions for:
+    + Formatted Input and Ouput (I/O)
+    + Print Messages
+    + Collect User Input
+    + Write into a File
+### What is a Pointer?
+- Where does the values get stored?
+- A pointer is a variable that points to the memory address of another variable
+- A special variable
+:thumbsup: `Scan(%Username)` => `Scane(0xc00000e0a8)`
