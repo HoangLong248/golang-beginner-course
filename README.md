@@ -48,3 +48,12 @@
     `var bookings = [50]string{}`
 - Only the same data type can be stored
 - Adding and accessing elements by their index (position)
+### Slices in Go
+- Slice in an **abstraction of an Array**
+- Slice are more flexible and powerful:
+    - **variable-length**
+    - get an sub-array of its own
+- Slices are also **index-based** and have a size, but is **resize when needed**
+### append
+- Adds the element(s) **at the end of the slices**
+- **Grows the slice if a greater capacity is needed** and returns the updated slice value.
