@@ -36,3 +36,15 @@
 - A pointer is a variable that points to the memory address of another variable
 - A special variable
 :thumbsup: `Scan(%Username)` => `Scane(0xc00000e0a8)`
+
+## Array & Slices in Go
+- Data structures to store collection of elements in a single variable.
+- We want to store the entered user data in some kind of a list
+    - who is attending the conference?
+    - who booked the tickets?
+### Arrays in Go
+- Fixed size ( size = how many elements the array can hold )
+    `var variable_name[size]variable_type`
+    `var bookings = [50]string{}`
+- Only the same data type can be stored
+- Adding and accessing elements by their index (position)
