@@ -35,18 +35,30 @@ func main() {
 		fmt.Println("Enter your number tickets: ")
 		fmt.Scan(&userTickets)
 
-		remainingTickets = remainingTickets - userTickets
-		bookings = append(bookings, firstName+" "+lastName)
+		if userTickets <= remainingTickets { // check userTickets input less than or equal to remainingTickets
 
-		fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTickets, email)
-		fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+			remainingTickets = remainingTickets - userTickets
+			bookings = append(bookings, firstName+" "+lastName)
 
-		firstNames := []string{}
-		for _, booking := range bookings { // underline to ignore a variable u don't want to use
-			var names = strings.Fields(booking) // Splits the string with white space as separator.
-			var firstName = names[0]            // Get the first name of the whole name
-			firstNames = append(firstNames, firstName)
+			fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTickets, email)
+			fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+
+			firstNames := []string{}           // slices of first name
+			for _, booking := range bookings { // underline to ignore a variable u don't want to use
+				var names = strings.Fields(booking) // Splits the string with white space as separator.
+				var firstName = names[0]            // Get the first name of the whole name
+				firstNames = append(firstNames, firstName)
+			}
+			fmt.Printf("The first name of our bookings are: %v\n", firstNames)
+
+			if remainingTickets == 0 {
+				// end program
+				fmt.Println("Our conference is booked out. Comeback next year.")
+				break
+			}
+
+		} else {
+			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets\n", remainingTickets, userTickets)
 		}
-		fmt.Printf("The first name of our bookings are: %v\n", firstNames)
 	}
 }

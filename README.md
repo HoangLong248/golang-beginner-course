@@ -70,12 +70,14 @@
 - And returns a slice with the split elements.
 ### Blank Identifier
 - To ignore a variable you don't want to use.
-<<<<<<< HEAD
 ## Conditions (If/else) and Boolean Data Type
 ```
 if condition {
     // code to be executed if condition is true
-} else {
+} else if condition {
+    // code to be executed if condition is true
+} 
+else {
     // code to be executed if condition is false
 }
 ```
@@ -90,3 +92,13 @@ if condition {
 | <= | Less than or equal to |
 | > | Greater than |
 | >= | Greater than or equal to |
+### "break" statement
+- **Terminates the for loop**
+- And continues with the code right after the for loop (in our case we don't have any code)
+
+### "continue" statement
+- Causes loop to skip the remainder of its body.
+- And immediately retesting its condition (in our infinite loop our condition is always true)
+
+### End of a Loop
+- A loop continues as long as a condition is true
