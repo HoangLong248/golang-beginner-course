@@ -70,3 +70,21 @@
 - And returns a slice with the split elements.
 ### Blank Identifier
 - To ignore a variable you don't want to use.
+## Conditions (If/else) and Boolean Data Type
+```
+if condition {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}
+```
+### Conditions
+- Expressions that evaluate to either **true** or **false**
+| Operator | Description |
+|---|---|
+| == | Compares two things |
+| != | Not equal |
+| < | Less than |
+| <= | Less than or equal to |
+| > | Greater than |
+| >= | Greater than or equal to |
