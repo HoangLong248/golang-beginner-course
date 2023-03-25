@@ -81,6 +81,7 @@ if condition {
 ```
 ### Conditions
 - Expressions that evaluate to either **true** or **false**
+
 | Operator | Description |
 |---|---|
 | == | Compares two things |
