@@ -57,3 +57,16 @@
 ### append
 - Adds the element(s) **at the end of the slices**
 - **Grows the slice if a greater capacity is needed** and returns the updated slice value.
+
+## Loops
+- In general, languages provide various control structures to control the applications flow
+- A loop statement allows us to execute code multiple times, in a loop.
+- You only have the **"for loop"** in Go.
+### ranges
+- Range interates over elements for different data structures (so not only arrays and slices)
+- For arrays and slices, range provides the index and value for each element.
+### strings.Fields()
+- Splits the string with white space as separator.
+- And returns a slice with the split elements.
+### Blank Identifier
+- To ignore a variable you don't want to use.
