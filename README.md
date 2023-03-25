@@ -35,7 +35,7 @@
 - Where does the values get stored?
 - A pointer is a variable that points to the memory address of another variable
 - A special variable
-:thumbsup: `Scan(%Username)` => `Scane(0xc00000e0a8)`
+:thumbsup: `Scan(%Username)` => `Scan(0xc00000e0a8)`
 
 ## Array & Slices in Go
 - Data structures to store collection of elements in a single variable.
@@ -70,6 +70,7 @@
 - And returns a slice with the split elements.
 ### Blank Identifier
 - To ignore a variable you don't want to use.
+<<<<<<< HEAD
 ## Conditions (If/else) and Boolean Data Type
 ```
 if condition {
