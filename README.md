@@ -186,3 +186,10 @@ else {
 
 ### Global
 - Declaration **outside all functions & uppercase first letter**
+
+## Maps
+- Maps unique keys to values.
+- You can retrieve the value by using its key value.
+- All keys have the same data type
+- All values have the same data type
+- We can not mix data types
