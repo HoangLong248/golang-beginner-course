@@ -102,3 +102,19 @@ else {
 
 ### End of a Loop
 - A loop continues as long as a condition is true
+
+## User Input Validation
+- We need to expect that and **make sure our application can handle bad user input**
+- We always need to validate user input.
+
+### Logical Operator -- &&
+- Called logical **AND** operator
+- **Both conditions must be true**, for the whole expression to be true
+
+### Logical Operator -- ||
+- Called logical **OR** operator
+- **Any of the conditions must be true**, for the whole expression to be true
+
+## Logical Operator -- !
+- Called logical **NOT** operator
+- Reverses the boolean value.
