@@ -227,7 +227,7 @@ type UserData struct {
 
 ### Single Thread
 
-![Screenshot](./image/single_thread.png)
+![Screenshot](image/single_thread.png)
 
 - **Step by step** execution of the code
 
