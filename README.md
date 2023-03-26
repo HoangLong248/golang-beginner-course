@@ -155,3 +155,18 @@ else {
 ### More Use Cases for Functions
 - Group logic that belongs together.
 - Reuse logic and so reducing duplication of code.
+
+## Packages in Go
+- Go programs are organized into packages
+- A package is **a collection of Go files**
+
+### Scope: Package level
+- Again: Variables and Functions defined outside any function, can be accessed in all other files **within the same package**
+
+### Multiple Packages in your app
+- Organize your app
+- logically group your code.
+
+### Exporting a variable
+- Make it available for all packages in the app
+- **Capitalize first letter**
