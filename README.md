@@ -193,3 +193,23 @@ else {
 - All keys have the same data type
 - All values have the same data type
 - We can not mix data types
+
+## Struct Data Type
+- Stands for "Structure"
+- Can hold mixed data types
+
+### "type" statement - Custom types
+- The **type keyword creates a new type**, with the name you specify
+- In fact, you could also create a type based on every other data type like int, string, etc
+```
+type UserData struct {
+	firstName       string
+	lastName        string
+	email           string
+	numberOfTickets uint
+}
+```
+### Defining a structure
+- Mixed data type
+- Defining a structure (which fields) of the User Type
+- It's like a **lightweight class**, which e.g. doesn't support inheritance
