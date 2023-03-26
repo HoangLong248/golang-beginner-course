@@ -118,3 +118,7 @@ else {
 ## Logical Operator -- !
 - Called logical **NOT** operator
 - Reverses the boolean value.
+
+## Switch Statement
+- Allows a variable to be tested for equality against a list of values
+- Default handles the case, if no match is found.
