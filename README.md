@@ -170,3 +170,19 @@ else {
 ### Exporting a variable
 - Make it available for all packages in the app
 - **Capitalize first letter**
+
+## 3 Levels of Scope
+
+- Local
+- Package
+- Global
+
+### Local
+- Declaration **within function**
+- Declaration **within block** (e.g for, if-else)
+
+### Package
+- Declaration **outside all function**
+
+### Global
+- Declaration **outside all functions & uppercase first letter**
