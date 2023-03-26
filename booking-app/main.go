@@ -3,6 +3,8 @@ package main
 import (
 	"booking-app/helper"
 	"fmt"
+	"sync"
+	"time"
 )
 
 // Package Level Variables
@@ -22,46 +24,51 @@ type UserData struct {
 	numberOfTickets uint
 }
 
+var wg = sync.WaitGroup{}
+
 func main() {
 
 	// Call func greetUsers with param confName
 	greetUsers()
 
-	for {
-		// get user input
-		firstName, lastName, email, userTickets := getUserInput()
+	// get user input
+	firstName, lastName, email, userTickets := getUserInput()
 
-		// return validate user input
-		isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+	// return validate user input
+	isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 
-		// check userTickets input less than or equal to remainingTickets
-		if isValidName && isValidEmail && isValidTicketNumber {
+	// check userTickets input less than or equal to remainingTickets
+	if isValidName && isValidEmail && isValidTicketNumber {
 
-			bookTicket(userTickets, firstName, lastName, email)
+		bookTicket(userTickets, firstName, lastName, email)
 
-			// call func firstNames and return values of list of firstName
-			firstNames := getFirstNames()
+		wg.Add(1)
+		go sendTicket(userTickets, firstName, lastName, email)
 
-			fmt.Printf("The first name of our bookings are: %v\n", firstNames)
+		// call func firstNames and return values of list of firstName
+		firstNames := getFirstNames()
 
-			if remainingTickets == 0 {
-				// end program
-				fmt.Println("Our conference is booked out. Comeback next year.")
-				break
-			}
+		fmt.Printf("The first name of our bookings are: %v\n", firstNames)
 
-		} else {
-			if !isValidName {
-				fmt.Println("First name or last name you entered is too short:")
-			}
-			if !isValidEmail {
-				fmt.Println("Email you entered doesn't contain @ sign")
-			}
-			if !isValidTicketNumber {
-				fmt.Println("Number of tickets you entered is invalid")
-			}
+		if remainingTickets == 0 {
+			// end program
+			fmt.Println("Our conference is booked out. Comeback next year.")
+			// break
+		}
+
+	} else {
+		if !isValidName {
+			fmt.Println("First name or last name you entered is too short:")
+		}
+		if !isValidEmail {
+			fmt.Println("Email you entered doesn't contain @ sign")
+		}
+		if !isValidTicketNumber {
+			fmt.Println("Number of tickets you entered is invalid")
 		}
 	}
+	// Wait for thread done,  Blocks until the WaitGroup counter is 0
+	wg.Wait()
 
 	// city := "London"
 
@@ -133,4 +140,14 @@ func bookTicket(userTickets uint, firstName string, lastName string, email strin
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n", remainingTickets, conferenceName)
+}
+
+func sendTicket(userTickets uint, firstName string, lastName string, email string) {
+	time.Sleep(50 * time.Second)
+	var ticket = fmt.Sprintf("%v tickets for %v %v", userTickets, firstName, lastName)
+	fmt.Println("################")
+	fmt.Printf("Sending ticket:\n%v \nto email address %v\n", ticket, email)
+	fmt.Println("################")
+	// called by the goroutine to indicate that it's fininshed
+	wg.Done()
 }

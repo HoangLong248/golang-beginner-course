@@ -70,6 +70,7 @@
 - And returns a slice with the split elements.
 ### Blank Identifier
 - To ignore a variable you don't want to use.
+
 ## Conditions (If/else) and Boolean Data Type
 ```
 if condition {
@@ -213,3 +214,50 @@ type UserData struct {
 - Mixed data type
 - Defining a structure (which fields) of the User Type
 - It's like a **lightweight class**, which e.g. doesn't support inheritance
+
+## Goroutines - Concurrency in Go
+
+### "time" - functionality for time
+- The **sleep** function stops or blocks the current "thread" (goroutine) execution for the defined duration.
+
+- **Handle this blocking code with** Goroutines
+- **By default: Sequential** code execution
+- Processing 1 task or 1 code after another.
+- **Concurrency** to make our program more efficient
+
+### Single Thread
+
+![Screenshot](./image/single_thread.png)
+
+- **Step by step** execution of the code
+
+### "go" keyword
+
+- "go..." starts a new goroutines
+- A goroutine is a **lightweight thread** managed by the Go runtime
+
+<br/> :thumbsup: Stays Responsive
+<br/> :thumbsup: Faster
+
+### Synchronzing the Goroutines
+
+- By default, the main goroutine does **NOT** wait for other goroutines
+
+### Waitgroup
+
+- Waits for the launched gorountine to finish
+- Package "sync" provides basic synchronization functionality
+- **Add**: Sets the number of goroutines to wait for (**increase** the counter by the provided number)
+- **Wait**: Blocks until the WaitGroup counter is 0
+- **Done**: Decrements the WaitGroup counter by 1. So this is called by the goroutine to indicate that it's fininshed.
+
+### Goroutine
+
+- Go is using, what's called a **"Green thread"**
+- **Abstraction** of an actual thread.
+- Managed by the go runtime, we are only interacting with these high level goroutines.
+- Cheaper && lighweight.
+- You can **run** hundreds of thousands or **millions goroutines without affecting the performance**
+
+### Channels
+- **Built-in** functionality for goroutines to talk with one another.
