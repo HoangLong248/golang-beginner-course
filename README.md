@@ -122,3 +122,36 @@ else {
 ## Switch Statement
 - Allows a variable to be tested for equality against a list of values
 - Default handles the case, if no match is found.
+
+## Functions
+- Encapsulated code into own container (= function). Which logically belongs together!
+- Like variable name, you should give a function a **descriptive name.**
+- **Call the function by its name**, whenever you want to execute this block of code.
+- Every program has a least on function, which is the **main()** function
+- Function is only executed, when "called"!.
+- You can call a function as many times you want.
+- So a function is also used to reduce code duplication.
+
+### Parameters
+- Information can be passed into functions as parameter.
+- Parameters are also called arguments.
+
+<br/>:thumbsup: => Cleaner
+<br/>:thumbsup: => More Descriptive
+
+### Return Values
+- A function can return data as result.
+- So a function can take an input and return an output.
+
+### :boom: Returning multiple Values
+- A Go function can return multiple values
+
+### Package Level Variables
+- Defined at the top **outside all functions**
+
+### :star: Best Practice:
+- Define variable as "local" as possible
+
+### More Use Cases for Functions
+- Group logic that belongs together.
+- Reuse logic and so reducing duplication of code.
